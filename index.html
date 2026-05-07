@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kean Duffey — Multidisciplinary Engineer</title>
+  <meta name="description" content="Kean Duffey — multidisciplinary engineer spanning electrochemical R&D, grid-scale energy systems, physics-based modeling, and applied AI."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <nav aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <span class="nav-name">Kean Duffey</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── Hero ─────────────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Engineer · Inventor · Builder</p>
+        <h1 class="hero-name">Kean Duffey</h1>
+        <p class="hero-position">Multidisciplinary engineer with experience spanning electrochemical R&amp;D, grid-scale energy systems, physics-based modeling, project finance, and applied AI.</p>
+        <p class="hero-sub">Currently at the DOE Loan Programs Office.</p>
+      </div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-text">
+          <p class="fade-in">My background is in designing, building, and testing first-of-a-kind electrochemical and grid-scale energy systems. At Sun Catalytix and Lockheed Martin — which acquired Sun Catalytix in 2014 and continued operating the program as a small, startup-like product team — I spent a decade scaling flow battery technologies from bench-top cells to demonstration systems, working across system design, electrical architecture, controls logic, and maintenance planning.</p>
+          <p class="fade-in">Along the way I developed novel electrochemical instrumentation methods for real-time state-of-charge monitoring, led the logistics and sustainment engineering function for the commercial scale-up program, and built a physics-based Python model of the full energy storage system, which was used by test engineers and design teams for planning and architecture trades.</p>
+          <p class="fade-in">I am currently a Principal Engineer at the DOE Loan Programs Office, leading technical diligence and loan negotiations on advanced manufacturing and critical minerals projects and exploring how AI tools can improve the engineering review workflows applied to billion-dollar project evaluations. Outside of that, I train small transformer networks, run an algorithmic trading system on AWS, and try to build things rather than just talk about building them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Selected Work ──────────────────────────────────────────── -->
+    <section id="work">
+      <div class="container">
+        <h2>Selected Work</h2>
+        <p class="section-intro">A cross-section of hands-on technical work spanning system design, instrumentation, modeling, lifecycle planning, and AI tooling.</p>
+
+        <div class="work-grid">
+
+          <!-- 1. Flow Battery Scale-Up -->
+          <article class="work-card fade-in" aria-label="Flow Battery System Design and Scale-Up">
+            <div class="work-card-body">
+              <span class="work-card-tag">Sun Catalytix · Lockheed Martin AES</span>
+              <h3>Flow Battery System Design and Scale-Up</h3>
+              <figure class="img-float-right">
+                <img src="new_assets/flow_battery_schematic.png"
+                     alt="Flow battery system schematic showing negolyte and posolyte tanks, cell stack, balance of plant components, and power conversion unit"
+                     width="320" height="224" loading="lazy"/>
+              </figure>
+              <p>Lead engineer for the design, build, and commissioning of flow battery test systems at Sun Catalytix and Lockheed Martin. The scale range covered by this work spanned multiple orders of magnitude: cell active area from 25 cm² to 2,000 cm², power ratings from 9 W to 65 kW, tanks from under a gallon to over 10,000 gallons, and pumps from under 1 gpm to 500 gpm.</p>
+              <p>In addition, I wrote system requirements, drafted P&IDs, ran design and safety reviews, specified instrumentation, and coordinated commissioning of the systems.</p>
+            </div>
+          </article>
+
+          <!-- 2. SOC Sensor & Patents -->
+          <article class="work-card fade-in" aria-label="State-of-Charge Sensor Development and Patents">
+            <div class="work-card-body">
+              <span class="work-card-tag">Lockheed Martin AES · 3 Granted Patents</span>
+              <h3>State-of-Charge Sensor Development and Patents</h3>
+              <p>Over several years at Lockheed Martin I led development of novel in-line methods for monitoring state-of-charge in flowing electrolytes in real time. The work started with ORP probe calibration techniques and expanded into attenuated total reflectance spectroscopy and limiting-current methods, each requiring its own hardware design, integration into prototype hardware, validation against known standards, and diagnosis of failure modes in an operating system.</p>
+              <p>Three of these efforts resulted in granted patents.</p>
+            </div>
+            <div class="model-gallery-v2 mg-tall">
+              <div class="mg-pair">
+                <figure>
+                  <img src="assets/ORP_patent.png"
+                       alt="Two patent figures: dE/dS calibration curve versus state of charge (top) and ORP sensor correction factor tracked over nearly 1,000 hours of continuous operation (bottom)"
+                       width="500" height="700" loading="lazy"/>
+                  <figcaption>ORP calibration curve (top) and correction factor stability tracked over nearly 1,000 hours of operation (bottom), demonstrating long-term stability of the calibration method.</figcaption>
+                </figure>
+                <figure>
+                  <img src="new_assets/Limiting_Current_2_patent.png"
+                       alt="Limiting current transient response for 1M iron hexacyanide at 60% SOC and 95% SOC, showing the distinguishable current plateau used to infer electrolyte composition"
+                       width="500" height="700" loading="lazy"/>
+                  <figcaption>Limiting current response at 60% SOC (top) and 95% SOC (bottom); current plateaus for each test sample form the basis of the SOC measurement method.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Python Dynamic Model -->
+          <article class="work-card fade-in" aria-label="Physics-Based Dynamic Python Model">
+            <div class="work-card-body">
+              <span class="work-card-tag">Lockheed Martin AES · Python Modeling</span>
+              <h3>Physics-Based Dynamic Python Model</h3>
+              <p>I built a Python model of a complete flow battery energy storage unit using an object-oriented approach, capturing transient behavior to understand electrolyte temperatures, SOC evolution, water transport, heat exchanger dynamics, and stack resistance as a function of operating conditions. The architecture was modular by design, so individual subsystems could be refined without touching the rest of the model.</p>
+              <p>Test engineers used it to plan test sequences before committing to hardware runs. Design teams used it to answer architecture questions such as whether a single heat exchanger could control both electrolyte temperatures, and what happens to power module string currents when one stack starts to degrade. Later work extended the model to track particle size distribution under different filtration conditions.</p>
+            </div>
+            <div class="model-gallery-v2">
+              <div class="mg-pair">
+                <figure>
+                  <img src="new_assets/chart_posolyte_negolyte.png"
+                       alt="Time-series chart showing posolyte and negolyte electrolyte temperatures over a simulated charge-discharge cycle"
+                       width="500" height="300" loading="lazy"/>
+                  <figcaption>Bulk electrolyte temperatures over a charge-discharge cycle showing cooling of one electrolyte could manage system temperatures.</figcaption>
+                </figure>
+                <figure>
+                  <img src="new_assets/chart_decaying_stack_res (1).png"
+                       alt="Time-series chart showing power module string currents as a single stack progressively degrades, causing redistribution across adjacent strings"
+                       width="500" height="300" loading="lazy"/>
+                  <figcaption>String current redistribution as a single stack begins to degrade. A failure mode that had not yet been observed during testing.</figcaption>
+                </figure>
+              </div>
+              <div class="mg-pair">
+                <figure>
+                  <img src="new_assets/particles_without_filter.png"
+                       alt="Particle size class concentrations over time without filtration, with small particles dominating at steady state"
+                       width="500" height="400" loading="lazy"/>
+                  <figcaption>Particle size distribution without filtration. Depending on growth and settling kinetics, either small or large particles can dominate at steady state in the electrolyte.</figcaption>
+                </figure>
+                <figure>
+                  <img src="new_assets/particles_with_filter.png"
+                       alt="Particle size class concentrations over time with active filtration, showing a shift toward larger agglomerates as fines are preferentially removed"
+                       width="500" height="400" loading="lazy"/>
+                  <figcaption>With active filtration, particles above the filter cutoff decrease as expected, while steady-state small particle quantities can actually increase as the distribution shifts.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Logistics & Sustainment Engineering -->
+          <article class="work-card fade-in" aria-label="Logistics and Sustainment Engineering">
+            <div class="work-card-body">
+              <span class="work-card-tag">Lockheed Martin AES · IPT Lead</span>
+              <h3>Logistics and Sustainment Engineering</h3>
+              <p>As Logistics and Sustainment Engineering IPT Lead at Lockheed Martin, I built the LSE function for the Advanced Energy Storage program from scratch. The work covered reliability-centered maintenance analysis, reliability block model of the full system, fault detection and isolation analyses, O&M and decommissioning cost models, and phased maintenance strategies for the path from pilot to early commercial scale.</p>
+              <p>The reliability and cost models were the most consequential output: component selection, redundancy levels, and service intervals were quantified against total-cost-of-ownership targets, giving hardware design trades a financial basis beyond engineering intuition. I also developed the deployment infrastructure plan and market requirements for the commercial scaling pathway, and managed the function's budget and schedule as it grew.</p>
+              <figure class="img-inline img-inline--wide">
+                <img src="new_assets/lse-block-diagram-final.svg"
+                     alt="High-level reliability block diagram showing series and parallel relationships in the flow battery system design"
+                     width="560" height="300" loading="lazy"/>
+                <figcaption>Simplified high-level reliability block diagram illustrating the series and parallel structure of the system design.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- 5. AI Tooling at DOE LPO -->
+          <article class="work-card fade-in" aria-label="AI Tooling for Engineering Diligence at DOE LPO">
+            <div class="work-card-body">
+              <span class="work-card-tag">DOE Loan Programs Office · Current Work</span>
+              <h3>AI Tooling for Engineering Workflows</h3>
+              <p>At the DOE Loan Programs Office, I am leading a division-level effort to explore how AI can improve the engineering intake and technical document review workflows used to evaluate billion-dollar project applications. The current process relies on manual reviews, unstructured documents, and institutional memory, which does not scale as application volume grows and the technology landscape broadens.</p>
+              <p>The work involves scoping multi-agent architectures for intake screening, parallel technical document analysis, and risk flagging, as well as evaluating cloud-based ML platforms for potential implementation. We are in an active assessment and prototyping phase. The intent is something that functions as a technical analyst, not a replacement for one.</p>
+              <figure class="img-inline img-inline--wide">
+                <img src="new_assets/ai-paralegal-workflow-edited.svg"
+                     alt="Multi-agent AI workflow: project documents flow through an intake screening agent, parallel technical review and risk assessment agents, a human review gate, and out as a structured recommendation"
+                     width="560" height="240" loading="lazy"/>
+              </figure>
+            </div>
+          </article>
+
+          <!-- 6. Self-Directed AI/ML Projects -->
+          <article class="work-card fade-in" aria-label="Self-Directed AI and Technical Projects">
+            <div class="work-card-body">
+              <span class="work-card-tag">Personal Projects · AWS · Python</span>
+              <h3>Self-Directed AI and Technical Projects</h3>
+              <figure class="img-float-right">
+                <img src="assets/algo-trader-results.png"
+                     alt="Multi-series chart comparing SP100 algorithmic trading strategy performance against a VOO dividend baseline from 2016 to 2026, showing significant outperformance by the algorithm"
+                     width="640" height="480" loading="lazy"/>
+                <figcaption>Algo trader performance vs. VOO dividend baseline, 2016–2026.</figcaption>
+              </figure>
+              <p>I built and deployed an algorithmic trading system on AWS EC2, executing trades via the Alpaca API in paper-trading mode. The performance chart shown is my own output.</p>
+              <p>As a separate project, I trained small transformer networks on equity price data to explore whether transformers could learn useful patterns in market movements. When training data became the bottleneck, I built a synthetic data generation pipeline to try and expand the base training set, then use real data to fine tune training.</p>
+              <p>Around 2023 I also built a RAG-based research assistant using Llama 2-13B and LangChain for technical document search and summarization, a good way to learn how much the field would change in the next two years.</p>
+            </div>
+          </article>
+
+          <!-- 7. Ceramatec -->
+          <article class="work-card fade-in" aria-label="Early-Career R&D at Ceramatec">
+            <div class="work-card-body">
+              <span class="work-card-tag">Ceramatec · 2008–2011</span>
+              <h3>Early-Career Bench-Scale R&amp;D</h3>
+              <figure class="img-float-right img-float-right--sm">
+                <img src="new_assets/lactate_patent.png"
+                     alt="Patent figure showing a NaSICON electrochemical cell for sodium lactate caustic recycling, with sodium ion transport through a ceramic membrane separating the anode and cathode compartments"
+                     width="280" height="320" loading="lazy"/>
+                <figcaption>Electrochemical cell from the sodium lactate caustic recycling process, showing NaSICON membrane-mediated sodium transport.</figcaption>
+              </figure>
+              <p>From 2008 to 2011 I was a bench-scale R&D engineer at Ceramatec in the NaSICON group, working on electrochemical and process engineering projects that spanned a wide range of industrial applications: sodium lactate caustic recycling, biodiesel catalyst production, nuclear waste stream processing, sodium aluminate recovery, and bleach production from seawater.</p>
+              <p>My role on each covered the full lifecycle: writing proposals, developing test plans, designing and building test stands, running experiments, and authoring final reports. I also modeled single- and multi-tubular electrochemical stacks for fluid flow and heat transfer, which was my first real exposure to the kind of process-level modeling I would return to years later in flow batteries.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Patents ────────────────────────────────────────────────── -->
+    <section id="patents">
+      <div class="container">
+        <h2>Patents</h2>
+
+        <ul class="patent-list">
+          <li class="fade-in">
+            <span class="patent-title">Flow battery with a dynamic fluidic network.</span>
+            <span class="patent-meta">US Patent 11777128 B1 · Granted October 3, 2023</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Apparatus and method for determining state of charge in a redox flow battery via limiting currents.</span>
+            <span class="patent-meta">US Patent 10833340 · Granted November 10, 2020</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Concentration management in flow battery systems using an electrochemical balancing cell.</span>
+            <span class="patent-meta">US Patent 10461352 · Granted October 29, 2019</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Methods for determining state of charge and calibrating reference electrodes in a redox flow battery.</span>
+            <span class="patent-meta">US Patent 10388978 · Granted August 20, 2019</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Method and apparatus for measuring transient state-of-charge using inlet/outlet potentials.</span>
+            <span class="patent-meta">US Patent 10186726 · Granted January 22, 2019</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Method and device for carboxylic acid production.</span>
+            <span class="patent-meta">US Patent 9057137 B2 · Granted June 16, 2015</span>
+          </li>
+          <li class="fade-in">
+            <span class="patent-title">Systems and methods for removing catalyst and recovering free carboxylic acids after transesterification reaction.</span>
+            <span class="patent-meta">US Patent 8247585 B2 · Granted August 21, 2012</span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ── Background ─────────────────────────────────────────────── -->
+    <section id="background">
+      <div class="container">
+        <h2>Background</h2>
+        <div class="bg-grid">
+          <div class="bg-block fade-in">
+            <h3>Education</h3>
+            <p><strong>MS Chemical Engineering</strong><br/>Tufts University, 2018</p>
+            <p style="margin-top:0.75rem;"><strong>BS Chemical Engineering</strong><br/>University of Rochester, 2008<br/><span style="font-size:0.875rem; color:var(--text-muted);">Minor in Environmental Engineering</span></p>
+          </div>
+          <div class="bg-block fade-in">
+            <h3>Other</h3>
+            <ul>
+              <li>Technical mentor and judge for the CleanTech Open accelerator program since 2023, supporting startups in clean energy and sustainable technology</li>
+              <li>Early-stage pitch deck and strategy guidance for a recently launched deep-tech micro-VC focused on companies differentiated by strong IP</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────────────── -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="fade-in">The best way to reach me is by email.</p>
+        <ul class="contact-links fade-in">
+          <li>
+            <a href="mailto:kean.duffey@gmail.com" aria-label="Send email to Kean Duffey">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              kean.duffey@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/keanduffey" target="_blank" rel="noopener noreferrer" aria-label="Kean Duffey on LinkedIn (opens in new tab)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/keanduffey" target="_blank" rel="noopener noreferrer" aria-label="Kean Duffey on GitHub (opens in new tab)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built with <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Code</a> · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

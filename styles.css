@@ -1,0 +1,498 @@
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #F5F1EB;
+  --text:         #1F1F1C;
+  --text-muted:   #5A5753;
+  --accent:       #C96442;
+  --accent-hover: #B05535;
+  --border:       #DDD8D0;
+  --card-bg:      #EDE9E2;
+  --max-w:        780px;
+  --section-gap:  5rem;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Typography ────────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem);   letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+h3 { font-size: 1.1rem; font-weight: 600; font-family: 'Inter', sans-serif; }
+
+p { margin-bottom: 1rem; max-width: 68ch; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* ─── Layout ────────────────────────────────────────────────────── */
+.container {
+  width: min(var(--max-w), 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+section { padding-block: var(--section-gap); }
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+/* ─── Nav ───────────────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.nav-links a { color: var(--text-muted); }
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ─── Hero ──────────────────────────────────────────────────────── */
+#hero {
+  padding-block: 5rem 4.5rem;
+  border-top: none;
+}
+
+.hero-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-name { margin-bottom: 1rem; }
+
+.hero-position {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--text);
+  font-style: italic;
+  font-family: 'Source Serif 4', serif;
+  max-width: 58ch;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+/* ─── About ─────────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.about-text p { font-size: 1.025rem; }
+
+.claude-note {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 1.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+/* ─── Work Cards ────────────────────────────────────────────────── */
+#work .section-intro {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 60ch;
+}
+
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.work-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+
+.work-card:hover { box-shadow: 0 4px 20px rgb(0 0 0 / 0.07); }
+
+.work-card-img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  background: #E8E4DC;
+}
+
+.work-card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-card-body { padding: 1.5rem 1.75rem; }
+
+.work-card-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.work-card-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.work-card-body p {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  max-width: none;
+  margin-bottom: 0.6rem;
+}
+
+/* ─── Patents ───────────────────────────────────────────────────── */
+.patent-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.patent-list li {
+  padding: 1.1rem 1.25rem;
+  background: var(--card-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+
+.patent-title {
+  font-style: italic;
+  color: var(--text);
+}
+
+.patent-meta {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.patent-footnote {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ─── Background ────────────────────────────────────────────────── */
+.bg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.bg-block h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.bg-block p, .bg-block li {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.bg-block ul { list-style: none; padding: 0; }
+.bg-block ul li { margin-bottom: 0.4rem; }
+.bg-block ul li::before { content: "–  "; color: var(--accent); }
+
+/* ─── Contact ───────────────────────────────────────────────────── */
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.contact-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ─── Footer ────────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding-block: 1.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ─── Figures & Captions ────────────────────────────────────────── */
+figure { margin: 0; }
+
+figcaption {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.45;
+  padding: 0.55rem 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  background: var(--card-bg);
+}
+
+/* ─── Card: stacked image pair (Card 2 sensor) ──────────────────── */
+.card-images-stack { border-bottom: 1px solid var(--border); }
+
+.card-images-stack figure {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.card-images-stack figure:last-child { border-bottom: none; }
+
+.card-images-stack img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
+/* ─── Card: model output gallery (Card 3) ───────────────────────── */
+.model-gallery { border-bottom: 1px solid var(--border); }
+
+.model-gallery .mg-full {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.model-gallery .mg-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.model-gallery .mg-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+}
+.model-gallery .mg-pair figure:first-child { border-right: 1px solid var(--border); }
+.model-gallery .mg-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Patent figures grid ───────────────────────────────────────── */
+.patent-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.patent-figures figure {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.patent-figures figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fff;
+}
+.patent-figures figcaption {
+  border-radius: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* ─── Float-right image (inside work-card-body) ─────────────────── */
+.img-float-right {
+  float: right;
+  width: 42%;
+  margin: 0 0 0.75rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.img-float-right--sm { width: 34%; }
+.img-float-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.work-card-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ─── Inline centered image (within body text) ──────────────────── */
+.img-inline {
+  margin: 1.25rem auto;
+  max-width: 360px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.img-inline img { width: 100%; height: auto; display: block; }
+.img-inline--wide { max-width: 540px; }
+
+/* ─── Constrained top image ─────────────────────────────────────── */
+.work-card-img--constrained {
+  border-bottom: 1px solid var(--border);
+  background: #E8E4DC;
+}
+.work-card-img--constrained img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  display: block;
+  padding: 0.75rem;
+}
+
+/* ─── Model gallery v2 (text above, 2×2 grid below) ─────────────── */
+.model-gallery-v2 { border-top: 1px solid var(--border); }
+.model-gallery-v2 .mg-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.model-gallery-v2 .mg-pair:last-child { border-bottom: none; }
+.model-gallery-v2 .mg-pair figure:first-child { border-right: 1px solid var(--border); }
+.model-gallery-v2 .mg-pair img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+  padding: 0.5rem;
+}
+.model-gallery-v2.mg-tall .mg-pair img { max-height: 320px; }
+
+/* ─── Fade-in animation ─────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  :root { --section-gap: 3.5rem; }
+
+  .nav-links { gap: 1.1rem; }
+  .nav-links li:nth-child(n+4) { display: none; }
+
+  .bg-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .work-card-body { padding: 1.25rem; }
+
+  .contact-links { flex-direction: column; }
+
+  .patent-figures { grid-template-columns: 1fr; }
+
+  .model-gallery .mg-pair { grid-template-columns: 1fr; }
+  .model-gallery .mg-pair figure:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+
+  .img-float-right, .img-float-right--sm {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .model-gallery-v2 .mg-pair { grid-template-columns: 1fr; }
+  .model-gallery-v2 .mg-pair figure:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+@media (max-width: 400px) {
+  .nav-links { display: none; }
+}

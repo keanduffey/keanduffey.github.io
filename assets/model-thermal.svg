@@ -1,0 +1,122 @@
+<svg width="600" height="262" viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg"
+     font-family="Inter, system-ui, sans-serif" role="img"
+     aria-label="Two-panel chart from the flow battery Python model showing simulated electrolyte temperatures over a charge-discharge cycle: left panel shows bulk posolyte and negolyte temperatures; right panel shows posolyte inlet versus outlet temperatures across the heat exchanger">
+
+  <rect width="600" height="262" fill="#fff"/>
+
+  <!-- ═══ LEFT PANEL ════════════════════════════════════════════════ -->
+  <!-- Chart area: x=52–287, y=28–208 -->
+
+  <!-- Grid lines -->
+  <line x1="52" y1="208" x2="287" y2="208" stroke="#DDD8D0" stroke-width="1"/>
+  <line x1="52" y1="179" x2="287" y2="179" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="150" x2="287" y2="150" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="121" x2="287" y2="121" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="92"  x2="287" y2="92"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="63"  x2="287" y2="63"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="34"  x2="287" y2="34"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="52" y1="28"  x2="52"  y2="208" stroke="#DDD8D0" stroke-width="1"/>
+  <line x1="287" y1="28" x2="287" y2="208" stroke="#DDD8D0" stroke-width="0.7"/>
+
+  <!-- Axes -->
+  <line x1="52" y1="28" x2="52" y2="210" stroke="#888580" stroke-width="1.3"/>
+  <line x1="50" y1="208" x2="289" y2="208" stroke="#888580" stroke-width="1.3"/>
+
+  <!-- Y-axis ticks and labels (318.2–319.4 K, step 0.2 → 7 labels) -->
+  <!-- y = 208 - (T-318.2)*(180/1.2)  →  1K=150px, 0.2K=30px -->
+  <!-- 318.2→208, 318.4→178, 318.6→148, 318.8→118, 319.0→88, 319.2→58, 319.4→28 -->
+  <text x="48" y="211" text-anchor="end" font-size="8">318.2</text>
+  <text x="48" y="181" text-anchor="end" font-size="8">318.4</text>
+  <text x="48" y="151" text-anchor="end" font-size="8">318.6</text>
+  <text x="48" y="121" text-anchor="end" font-size="8">318.8</text>
+  <text x="48" y="91"  text-anchor="end" font-size="8">319.0</text>
+  <text x="48" y="61"  text-anchor="end" font-size="8">319.2</text>
+  <text x="48" y="31"  text-anchor="end" font-size="8">319.4</text>
+  <!-- Y-axis label -->
+  <text x="11" y="120" text-anchor="middle" font-size="9" fill="#333" transform="rotate(-90,11,120)">Temperature (K)</text>
+
+  <!-- X-axis ticks and labels (0–45000 s) -->
+  <!-- x = 52 + t*(235/45000)  →  t=0→52, t=10000→104, t=20000→156, t=30000→209, t=40000→261, t=45000→287 -->
+  <text x="52"  y="220" text-anchor="middle" font-size="8">0</text>
+  <text x="104" y="220" text-anchor="middle" font-size="8">10000</text>
+  <text x="156" y="220" text-anchor="middle" font-size="8">20000</text>
+  <text x="209" y="220" text-anchor="middle" font-size="8">30000</text>
+  <text x="261" y="220" text-anchor="middle" font-size="8">40000</text>
+  <text x="170" y="232" text-anchor="middle" font-size="9" fill="#333">Time (sec)</text>
+
+  <!-- Title left panel -->
+  <text x="170" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="#333">Posolyte (blue), Negolyte (orange)</text>
+
+  <!-- Posolyte trace (blue #4A7A9B) -->
+  <!-- Smooth S-curve rise: 318.2K → 319.15K over ~40000s, slight dip end -->
+  <polyline fill="none" stroke="#4A7A9B" stroke-width="2" stroke-linejoin="round"
+    points="52,207 78,204 104,196 130,180 156,158 183,130 209,99 235,70 261,52 274,47 287,50"/>
+
+  <!-- Negolyte trace (orange #C96442) -->
+  <polyline fill="none" stroke="#C96442" stroke-width="2" stroke-linejoin="round"
+    points="52,208 78,205 104,197 130,182 156,160 183,132 209,101 235,72 261,54 274,49 287,52"/>
+
+  <!-- Legend left -->
+  <rect x="60" y="35" width="140" height="38" rx="2" fill="#fff" fill-opacity="0.85" stroke="#DDD8D0" stroke-width="0.8"/>
+  <line x1="68" y1="49" x2="88" y2="49" stroke="#4A7A9B" stroke-width="2"/>
+  <text x="92" y="52" font-size="8" fill="#333">Posolyte</text>
+  <line x1="68" y1="64" x2="88" y2="64" stroke="#C96442" stroke-width="2"/>
+  <text x="92" y="67" font-size="8" fill="#333">Negolyte</text>
+
+  <!-- ═══ RIGHT PANEL ════════════════════════════════════════════════ -->
+  <!-- Chart area: x=332–567, y=28–208 -->
+
+  <!-- Grid lines -->
+  <line x1="332" y1="208" x2="567" y2="208" stroke="#DDD8D0" stroke-width="1"/>
+  <line x1="332" y1="179" x2="567" y2="179" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="150" x2="567" y2="150" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="121" x2="567" y2="121" stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="92"  x2="567" y2="92"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="63"  x2="567" y2="63"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="34"  x2="567" y2="34"  stroke="#DDD8D0" stroke-width="0.7" stroke-dasharray="3,3"/>
+  <line x1="332" y1="28"  x2="332" y2="208" stroke="#DDD8D0" stroke-width="1"/>
+  <line x1="567" y1="28"  x2="567" y2="208" stroke="#DDD8D0" stroke-width="0.7"/>
+
+  <!-- Axes -->
+  <line x1="332" y1="28" x2="332" y2="210" stroke="#888580" stroke-width="1.3"/>
+  <line x1="330" y1="208" x2="569" y2="208" stroke="#888580" stroke-width="1.3"/>
+
+  <!-- Y-axis labels right panel -->
+  <text x="328" y="211" text-anchor="end" font-size="8">318.2</text>
+  <text x="328" y="181" text-anchor="end" font-size="8">318.4</text>
+  <text x="328" y="151" text-anchor="end" font-size="8">318.6</text>
+  <text x="328" y="121" text-anchor="end" font-size="8">318.8</text>
+  <text x="328" y="91"  text-anchor="end" font-size="8">319.0</text>
+  <text x="328" y="61"  text-anchor="end" font-size="8">319.2</text>
+  <text x="328" y="31"  text-anchor="end" font-size="8">319.4</text>
+  <text x="295" y="120" text-anchor="middle" font-size="9" fill="#333" transform="rotate(-90,295,120)">Posolyte Temperatures (K)</text>
+
+  <!-- X-axis labels right panel -->
+  <text x="332" y="220" text-anchor="middle" font-size="8">0</text>
+  <text x="384" y="220" text-anchor="middle" font-size="8">10000</text>
+  <text x="436" y="220" text-anchor="middle" font-size="8">20000</text>
+  <text x="489" y="220" text-anchor="middle" font-size="8">30000</text>
+  <text x="541" y="220" text-anchor="middle" font-size="8">40000</text>
+  <text x="450" y="232" text-anchor="middle" font-size="9" fill="#333">Time (sec)</text>
+
+  <!-- Title right panel -->
+  <text x="450" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="#333">Pos Inlet (red), Pos Outlet (green)</text>
+
+  <!-- Pos Inlet (red, slightly higher temp) -->
+  <polyline fill="none" stroke="#B84020" stroke-width="2" stroke-linejoin="round"
+    points="332,207 358,203 384,193 410,176 436,152 462,122 489,88 515,58 541,40 554,35 567,37"/>
+
+  <!-- Pos Outlet (green, slightly cooler) -->
+  <polyline fill="none" stroke="#5A8A5A" stroke-width="2" stroke-linejoin="round"
+    points="332,208 358,205 384,196 410,179 436,155 462,126 489,93 515,63 541,46 554,40 567,42"/>
+
+  <!-- Legend right -->
+  <rect x="340" y="35" width="130" height="38" rx="2" fill="#fff" fill-opacity="0.85" stroke="#DDD8D0" stroke-width="0.8"/>
+  <line x1="348" y1="49" x2="368" y2="49" stroke="#B84020" stroke-width="2"/>
+  <text x="372" y="52" font-size="8" fill="#333">Pos Inlet</text>
+  <line x1="348" y1="64" x2="368" y2="64" stroke="#5A8A5A" stroke-width="2"/>
+  <text x="372" y="67" font-size="8" fill="#333">Pos Outlet</text>
+
+  <!-- Panel divider -->
+  <line x1="300" y1="10" x2="300" y2="240" stroke="#DDD8D0" stroke-width="1.2"/>
+</svg>
